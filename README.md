@@ -1,1 +1,1 @@
-[DEMO](https://liliyatar.github.io/layout_candles/).
+[DEMO](https://liliyatar.github.io/layout_candles/)
