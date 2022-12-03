@@ -1,7 +1,21 @@
+.container {
+  max-width: 1180px;
+  margin: auto;
+  margin-top: 40px;
+}
+
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "header";
+@import "header-content";
+@import "introductory";
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-  background: $c-gray;
+  background: $c-light-brown;
+  font-family: "Poppins", sans-serif;
 }

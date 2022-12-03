@@ -1,0 +1,47 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 200px;
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+  
+.nav {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 288px;
+    padding-left: 33px;
+  }
+    
+  &__item {
+    list-style-type: none;
+    display: inline-block;
+  }
+    
+  &__link {
+    color: $c-green;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+  
+.btn span.shopping-bag {
+  padding-right: 2px;
+  background: url(/images/shopping-bag.svg) no-repeat;
+  float: left;
+  width: 23px;
+  height: 26px;
+}
+  
+.btn {
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
+}
