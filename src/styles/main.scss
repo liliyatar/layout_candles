@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+@import "utils";
+@import "fonts";
+@import "typography";
+@import "header";
+@import "main-screen";
+@import "button";
+@import "introductory";
+@import "about-section";
+@import "about-brand";
+@import "shop";
+@import "slider";
+@import "about-creators";
+@import "ingredients";
+@import "advantages";
+@import "contact-us";
+@import "input";
+@import "footer";
+@import "label";
+@import "container";
+
+.page {
+  scroll-behavior: smooth;
+}
