@@ -50,14 +50,10 @@
     display: none;
     gap: 20px;
     align-items: flex-end;
-    // min-width: 580px;
-    // overflow: hidden;
     cursor: pointer;
 
-    // width: 50%;
     @include onTablet {
       display: flex;
-    //   min-width: 342px;
     }
   }
 
