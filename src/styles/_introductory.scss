@@ -1,0 +1,92 @@
+.introductory-section {
+  margin-top: 0;
+  position: relative;
+
+  @include onTablet {
+    margin-bottom: 47px;
+  }
+
+  @include onDesktop {
+    margin-bottom: 200px;
+  }
+  
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44%;
+    border: none;
+
+    @include onTablet {
+      border-bottom: 1px solid rgba(52, 79, 16, 0.5);
+    }
+  }
+  
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 49.48%;
+    border: none;
+
+    @include onTablet {
+      border-bottom: 1px solid rgba(52, 79, 16, 0.5);
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    height: 282px;
+    gap: 120px;
+
+    @include onTablet {
+      justify-content: center;
+      height: 246px;
+    }
+
+    @include onDesktop {
+      justify-content: start;
+      height: 344px;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $c-green;
+    width: 280px;
+    font-size: 18px;
+    line-height: 27px;
+
+    @include onTablet {
+      text-align: center;
+    }
+
+    @include onDesktop {
+      width: 380px;
+      padding-bottom: 27px;
+      line-height: 36px;
+      font-size: 24px;
+      text-align: start;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    color: $c-dark-gray;
+    line-height: 24px;
+    padding-left: 100px;
+    width: 480px;
+    display: none;
+
+    @include onDesktop {
+      display: block;
+    }
+  }
+}

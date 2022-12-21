@@ -1,0 +1,115 @@
+.shop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  padding-top: 100px;
+
+  @include onTablet {
+    padding-bottom: 130px;
+    padding-top: 127px;
+    margin: auto;
+    max-width: 714px;
+  }
+
+  @include onDesktop {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    max-width: 1180px;
+    padding: 0;
+  }
+
+  @include onDesktop {
+    max-width: 1180px;
+    padding-left: 100px;
+  }
+
+  &__slider-navigation {
+    padding-bottom: 25px;
+    width: 100%;
+
+    @include onMobile {
+      padding-bottom: 15px;
+
+      :last-child {
+        margin-right: 0;
+      }
+    }
+
+    @include onDesktop {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $c-green;
+    text-align: center;
+
+    @include onTablet {
+      font-size: 24px;
+      padding-bottom: 10px;
+      text-align: start;
+    }
+
+    @include onDesktop {
+      font-size: 36px;
+      line-height: 40px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__slider-navigation-radio {
+    display: none;
+    &:checked + .slider-navigation-button {
+      color: #333;
+      border-bottom-color: #333;
+    }
+  }
+
+  &__slides-navigation-buttons-box {
+    display: flex;
+    justify-content: center;
+
+    @include onTablet {
+      justify-content: start;
+    }
+  }
+
+  &__slides-navigation-button {
+    display: block;
+    height: 30px;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    transition-duration: $transitionDuration * 0.7;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    &--back {
+      margin-right: 20px;
+      background: url(../images/shop/navigation/button-back.svg) center
+        no-repeat;
+      opacity: 0.3;
+    }
+    &--next {
+      background: url(../images/shop/navigation/button-next.svg) center
+        no-repeat;
+    }
+  }
+
+  &__big-button {
+    margin: auto;
+  }
+
+  &__label {
+    top: 75px;
+    left: -68px;
+  }
+}
