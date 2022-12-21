@@ -1,0 +1,45 @@
+.input {
+  padding: 0 0 5px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: $c-gray;
+  border: none;
+  border-bottom: 1px solid $c-light-gray;
+  background-color: transparent;
+  transition-duration: 0.05s;
+  outline: none;
+
+  @include onTablet {
+    font-weight: 500;
+  }
+
+  @include onDesktop {
+    padding: 0 0 10px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  &:not(:focus) {
+    color: $c-gray;
+    border-bottom-color: $c-light-gray;
+  }
+
+  &:focus {
+    outline: none;
+    color: $c-dark-gray;
+    border-color: $c-dark-gray;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    color: $c-light-red;
+    border-color: $c-light-red;
+    -webkit-text-fill-color: $c-light-red;
+  }
+
+  &:valid:not(:focus) {
+    color: $c-green;
+    border-color: $c-green;
+    -webkit-text-fill-color: $c-green;
+  }
+}

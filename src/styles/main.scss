@@ -1,21 +1,27 @@
-.container {
-  max-width: 1180px;
-  margin: auto;
-  margin-top: 40px;
+* {
+  box-sizing: border-box;
 }
 
 @import "utils";
 @import "fonts";
 @import "typography";
 @import "header";
-@import "header-content";
+@import "main-screen";
+@import "button";
 @import "introductory";
+@import "about-section";
+@import "about-brand";
+@import "shop";
+@import "slider";
+@import "about-creators";
+@import "ingredients";
+@import "advantages";
+@import "contact-us";
+@import "input";
+@import "footer";
+@import "label";
+@import "container";
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background: $c-light-brown;
-  font-family: "Poppins", sans-serif;
+.page {
+  scroll-behavior: smooth;
 }

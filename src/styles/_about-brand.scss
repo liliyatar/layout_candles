@@ -1,0 +1,39 @@
+.about-brand__title {
+  padding-bottom: 10px;
+
+  @include onDesktop {
+    padding-bottom: 40px;
+  }
+}
+
+.about-brand__text {
+  display: none;
+
+  @include onDesktop {
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+}
+
+.about-brand__label {
+  top: 145px;
+  left: -137px;
+}
+
+.about-brand__image {
+  display: none;
+
+  @include onDesktop {
+    display: block;
+  }
+}
+
+.about-brand__link {
+  padding-bottom: 10px;
+  padding-top: 30px;
+
+  @include onDesktop {
+    padding-top: 0;
+  }
+}
