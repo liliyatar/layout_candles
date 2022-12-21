@@ -1,62 +1,579 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Witch Of Mountain Winds</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
   <body>
-    <header class="header container">
-      <nav class="nav header__nav">
-        <img 
-        src="images/logo.svg"
-        class="logo header__logo"
-        alt="logo"
-        >
+    <header class="header">
+      <input
+        type="checkbox"
+        id="menuToggler"
+        class="header__menu-toggler"
+      >
+      <div class="header__plug"></div>
+      <label for="menuToggler" class="header__menu-button">
+        <div class="header__menu-button-line"></div>
+        <div class="header__menu-button-line"></div>
+        <div class="header__menu-button-line"></div>
+      </label>
 
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#" class="nav__link">Shop</a>
+      <a href="#" class="header__logo-image header__logo-box"></a>
+
+      <nav class="header__menu menu-text">
+        <ul class="header__ul">
+          <li class="header__li">
+            <a href="#shop" class="header__link">
+              Shop
+            </a>
           </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Contact</a>
+          <li class="header__li">
+            <a href="#contactUs" class="header__link">
+              Contact
+            </a>
           </li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">About</a>
+          <li class="header__li">
+            <a href="#aboutUs" class="header__link">
+              About
+            </a>
           </li>
         </ul>
-
-        <div class="btn">
-          <span class="shopping-bag"></span>
-        </div>
       </nav>
 
-      <div class="header__content">
-        <div class="content">
-          <h1 class="content__title">Brand of eco-cosmetics and magic candles</h1>
-          <div class="content__text">20% of sales at a wild bird shelter</div>
-          <button class="content__button">Shop</button>
-        </div>
-        <img 
-          src="images/candles.png"
-          alt="candles"
-          class="main__image"
-        >
-      </div>
+      <label for="menuToggler" class="header__basket"></label>
     </header>
 
-    <section class="introductory">
-      <div class="introductory__section container">
-        <div class="introductory__section__text">Biologists say that birds are indicators of the environmental situation, and over the past half century, the population of seabirds has declined by 70%. Birds die due to environmental problems and human intervention in the natural environment.</div>
-        <div class="introductory__section__title">if you choose the gifts of nature and care about it’s - scroll down</div>
-      </div>
-    </section>
-
     <main>
+      <section class="main-screen">
+        <div class="main-screen__content">
+          <h1 class="main-screen__title">Brand of eco-cosmetics and magic candles</h1>
+          <div class="main-screen__text">20% of sales at a wild bird shelter</div>
+          <button class="main-screen__button button">Shop</button>
+        </div>
+        <picture>
+          <source 
+            srcset="/images/candles-desktop.svg"
+            media="(min-width: 1280px)"
+            class="main-screen__image"
+          >
+          <source 
+            srcset="/images/candles-tablet.svg"
+            media="(min-width: 768px)"
+            class="main-screen__image"
+          >
+          <img 
+            src="/images/candles-mobile.svg" 
+            alt="candles"
+            class="main-screen__image about-section__image"
+          >
+        </picture>
+      </section>
+  
+      <section class="introductory-section">
+        <div class="introductory-section__content container">
+          <div class="introductory-section__text">Biologists say that birds are indicators of the environmental situation, and over the past half century, the population of seabirds has declined by 70%. Birds die due to environmental problems and human intervention in the natural environment.</div>
+          <div class="introductory-section__title">if you choose the gifts of nature and care about it’s - scroll down</div>
+        </div>
+      </section>
+
+      <section id="aboutUs" class="about-section container">
+        <div class="about-section__content">
+          <div class="label about-brand__label">
+            <div class="line"></div>
+            <h2 class="line-text">witch of mountain winds</h2>
+          </div>
+          <div class="about-section__info">
+            <h1 class="about-section__title about-brand__title">About our brand</h1>
+            <div class="about-section__text">Our brand cosmetics are made from natural ingredients and we are promoting them to the masses. Shampoo, hair conditioner, soap - in recycled paper. Creams, oils, washing products in glass containers with recycled paper labels. No synthetics and microplastics in cosmetics. And the packaging from it can be returned for recycling or reused.</div>
+            <div class="about-section__text about-brand__text">We are all neighbors of one big House. And we must protect what we have. Destroying everything around for the sake of consumerism and imaginary convenience, we destroy what does not belong to us. Be aware of your choice!</div>
+            <a href="#" class="about-section__link about-brand__link">LEARN MORE</a>
+          </div>
+
+          <div class="about-section__images">
+            <picture>
+              <source 
+                srcset="images/about/candle-big.png"
+                media="(min-width: 1280px)"
+              >
+              <source 
+                srcset="images/about/candle-tablet.png"
+                media="(min-width: 768px)"
+              >
+              <img 
+                src="images/about/candle-tablet.png" 
+                alt="candles"
+              >
+            </picture>
+            <img 
+              src="images/about/candle-small.png" 
+              alt="candle"
+              class="about-brand__image"
+              >
+          </div>
+        </div>
+      </section>
+
+      <article id="shop" class="shop">
+        <div class="label shop__label">
+          <div class="line"></div>
+          <h2 class="line-text">shop</h2>
+        </div>
+        <h1 class="shop__title">
+          Shop
+        </h1>
+
+        <div class="shop__slider-navigation container">
+          <input
+            type="radio"
+            name="shopSliderCategoryToggler"
+            id="shopSliderFace"
+            checked
+            class="shop__slider-navigation-radio"
+          >
+          <label for="shopSliderFace" class="slider-navigation-button">
+            Face
+          </label>
+
+          <input
+            type="radio"
+            name="shopSliderCategoryToggler"
+            id="shopSliderBody"
+            class="shop__slider-navigation-radio"
+          >
+          <label for="shopSliderBody" class="slider-navigation-button">
+            Body
+          </label>
+
+          <input
+            type="radio"
+            name="shopSliderCategoryToggler"
+            id="shopSliderHair"
+            class="shop__slider-navigation-radio"
+          >
+          <label for="shopSliderHair" class="slider-navigation-button">
+            Hair
+          </label>
+
+          <input
+            type="radio"
+            name="shopSliderCategoryToggler"
+            id="shopSliderCandles"
+            class="shop__slider-navigation-radio"
+          >
+          <label for="shopSliderCandles" class="slider-navigation-button">
+            Candles
+          </label>
+        </div>
+
+        <section class="slider shop__slider">
+          <div class="slider__slides-row">
+            <a href="#" class="slider__slide">
+              <img
+                src="images/shop/face/face-01.jpeg"
+                alt="anti-stress face mask photo"
+                class="slider__image"
+              >
+              <h3 class="heading-fifth-lvl slider__name">
+                Anti-stress face mask
+              </h3>
+              <p class="price-text slider__price">
+                220 UAH / 100 ML
+              </p>
+            </a>
+            <a href="#" class="slider__slide">
+              <img
+                src="images/shop/face/face-02.jpeg"
+                alt="mineral powder photo"
+                class="slider__image"
+              >
+              <h3 class="heading-fifth-lvl slider__name">
+                Mineral powder
+              </h3>
+              <p class="price-text slider__price">
+                300 UAH
+              </p>
+            </a>
+            <a href="#" class="slider__slide">
+              <img
+                src="images/shop/face/face-03.jpeg"
+                alt="Face serum photo"
+                class="slider__image"
+              >
+              <h3 class="heading-fifth-lvl slider__name">
+                Face serum
+              </h3>
+              <p class="price-text slider__price">
+                200 UAH
+              </p>
+            </a>
+
+            <a href="#" class="slider__slide">
+              <img
+                src="images/shop/body/body-01.jpeg"
+                alt="balm Provence photo"
+                class="slider__image"
+              >
+              <h3 class="heading-fifth-lvl slider__name">
+                Firm Foam Cleanser
+              </h3>
+              <p class="price-text slider__price">
+                80 UAH
+              </p>
+            </a>
+            <a href="#" class="slider__slide">
+              <img
+                src="images/shop/body/body-02.jpeg"
+                alt="Firm Foam Cleanser photo"
+                class="slider__image"
+              >
+              <h3 class="heading-fifth-lvl slider__name">
+                Moisturizer for hands
+              </h3>
+              <p class="price-text slider__price">
+                220 UAH
+              </p>
+            </a>
+            <a href="#" class="slider__slide">
+              <img
+                src="images/shop/body/body-03.jpeg"
+                alt="moisturizer for hands photo"
+                class="slider__image"
+              >
+              <h3 class="heading-fifth-lvl slider__name">
+                Fragrant
+              </h3>
+              <p class="price-text slider__price">
+                60 UAH
+              </p>
+            </a>
+
+            <a href="#" class="slider__slide">
+              <img
+                src="images/shop/hair/hair-01.jpeg"
+                alt="Healthy hair oil photo"
+                class="slider__image"
+              >
+              <h3 class="heading-fifth-lvl slider__name">
+                Healthy hair oil
+              </h3>
+              <p class="price-text slider__price">
+                240 UAH
+              </p>
+            </a>
+            <a href="#" class="slider__slide">
+              <img
+                src="images/shop/hair/hair-02.jpeg"
+                alt="avocado hair conditioner photo"
+                class="slider__image"
+              >
+              <h3 class="heading-fifth-lvl slider__name">
+                Avocado hair conditioner
+              </h3>
+              <p class="price-text slider__price">
+                200 UAH
+              </p>
+            </a>
+            <a href="#" class="slider__slide">
+              <img
+                src="images/shop/hair/hair-03.jpeg"
+                alt="almond shampoo photo"
+                class="slider__image"
+              >
+              <h3 class="heading-fifth-lvl slider__name">
+                Almond shampoo
+              </h3>
+              <p class="price-text slider__price">
+                120 UAH
+              </p>
+            </a>
+
+            <a href="#" class="slider__slide">
+              <img
+                src="images/shop/candles/candles-01.jpeg"
+                alt="Lamma's candles photo"
+                class="slider__image"
+              >
+              <h3 class="heading-fifth-lvl slider__name">
+                Lamma's candles
+              </h3>
+              <p class="price-text slider__price">
+                220 UAH
+              </p>
+            </a>
+            <a href="#" class="slider__slide">
+              <img
+                src="images/shop/candles/candles-02.jpeg"
+                alt="soy wax candles photo"
+                class="slider__image"
+              >
+              <h3 class="heading-fifth-lvl slider__name">
+                Lita candles
+              </h3>
+              <p class="price-text slider__price">
+                220 UAH
+              </p>
+            </a>
+            <a href="#" class="slider__slide">
+              <img
+                src="images/shop/candles/candles-03.jpeg"
+                alt="lita candles photo"
+                class="slider__image"
+              >
+              <h3 class="heading-fifth-lvl slider__name">
+              Perfect love candle
+              </h3>
+              <p class="price-text slider__price">
+                220 UAH
+              </p>
+            </a>
+
+          </div>
+        </section>
+
+        <div class="shop__slides-navigation-buttons-box">
+          <button class="shop__slides-navigation-button shop__slides-navigation-button--back"></button>
+          <button class="shop__slides-navigation-button shop__slides-navigation-button--next"></button>
+        </div>
+
+        <a
+          href="https://www.instagram.com/witch_of_mountain_winds/"
+          class="shop__big-button button"
+          target="_blank"
+          rel="noopener"
+        >
+          All products
+        </a>
+      </article>
+
+      <section class="about-section container">
+        <div class="about-section__content">
+          <div class="label about-creators__label">
+            <div class="line"></div>
+            <h2 class="line-text">about the creators</h2>
+          </div>
+          <div class="about-section__info">
+            <h1 class="about-section__title about-creators__title">About the creators</h1>
+            <div class="about-section__text about-creators__text">My name is Victoria, I’m a master at candle making and natural cosmetics. In the past, a cynologist, was engaged in herbs, made layouts on the Tarot.</div>
+            <div class="about-section__text about-creators__text">I am also a volunteer to save wild birds in distress, a consultant to the Phoenix Wildlife Rehabilitation Center, a member of the Society for the Conservation of Birds of Ukraine with the support of Birdlife International.</div>
+            <div class="about-section__text about-creators-hidden">My husband and I live in the Carpathian region in the city of Chernivtsi. I dream of my center for the rehabilitation of wild birds, as it is very difficult to rescue birds in a rented communal apartment.</div>
+            <a href="#" class="about-section__link about-creators__link">Learn more</a>
+            <a href="#" class="about-creators__button button">To contact us</a>
+          </div>
+
+          <div class="about-section__images">
+            <picture>
+              <source 
+                srcset="images/about-the-creators/about-the-creators.png"
+                media="(min-width: 1280px)"
+              >
+              <img 
+                src="images/about-the-creators/about-the-creators-tablet.png" 
+                alt="bird"
+                class="about-section__image"
+              >
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="ingredients container">
+        <div class="ingredients__content">
+          <div class="label ingredients__label">
+            <div class="line"></div>
+            <h2 class="line-text">ingredients</h2>
+          </div>
+          <div class="ingredients__info">
+            <h1 class="about-section__title about-creators__title">Ayurvedic Tooth Powder</h1>
+            <a href="#" class="about-section__link ingredients__link--hidden">Learn more</a>
+          </div>
+
+          <div class="ingredients__images">
+            <div class="ingredients__powder">
+              <p class="ingredient">Kaolin</p>
+              <p class="ingredient">Sivak</p>
+              <p class="ingredient">Calcium</p>
+              <p class="ingredient">Licorice root</p>
+              <p class="ingredient">Turmeric</p>
+            </div>
+            <picture>
+              <source 
+                srcset="images/ingredients/powder.svg"
+                media="(min-width: 1280px)"
+              >
+              <source 
+                srcset="images/ingredients/powder-tablet.svg"
+                media="(min-width: 768px)"
+              >
+              <img 
+                src="images/ingredients/powder-mobile.svg" 
+                alt="powder"
+              >
+            </picture>
+          </div>
+          <a href="#" class="about-section__link ingredients__link">Learn more</a>
+        </div>
+      </section>
+
+      <section class="advantages container">
+        <div class="advantages__content">
+          <div class="advantages__card">
+            <img src="images/advantages/no-synthetics-and-microplastics.svg" alt="no synthetics and microplastics">
+            <p class="advantages__title">No synthetics and microplastics</p>
+          </div>
+
+          <div class="advantages__card">
+            <img src="images/advantages/recycling.svg" alt="product packaging can be recycled or reused">
+            <p class="advantages__title">product packaging can be recycled or reused</p>
+          </div>
+          <div class="advantages__card">
+            <img src="images/advantages/natural-ingredients.svg" alt="only natural ingredients">
+            <p class="advantages__title">only natural ingredients</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contactUs" class="contact-us container">
+        <div class="about-section__content">
+          <div class="label contact-us__label">
+            <div class="line"></div>
+            <h2 class="line-text">help</h2>
+          </div>
+          <div class="about-section__info">
+            <form
+              action="#"
+              method="GET"
+              class="contact-us__text-column"
+            >
+              <h2 class="contact-us__title">
+                Contact Us
+              </h2>
+              <p class="contact-us__text">
+                We will help you choose a product that suits you and answer your other questions.
+              </p>
+              <input
+                type="text"
+                name="customerName"
+                class="contact-us__input input"
+                placeholder="Your Name"
+                pattern=".{2,}"
+                title="Your name: minimum 4 characters"
+                required
+              >
+              <input
+                type="email"
+                name="customerEmail"
+                class="contact-us__input input"
+                placeholder="E-Mail"
+                title="Your e-mail format: local-part@domain"
+                required
+              >
+              <input
+                type="tel"
+                name="customerPhone"
+                minlength="13"
+                maxlength="13"
+                class="contact-us__input input"
+                placeholder="Phone Number"
+                pattern="[\+]\d{12}"
+                title="Your phone number format: +xxxxxxxxxxxx"
+                required
+              >
+              <textarea
+                name="customerMessage"
+                rows="1"
+                class="contact-us__input contact-us__input--textaria input"
+                placeholder="Your Message"
+                required
+            ></textarea>
+              <input
+                type="submit"
+                name="contactSubmit"
+                class="contact-us__button button"
+                value="Send a message"
+              >
+            </form>
+          </div>
+
+          <div class="about-section__images">
+            <picture>
+              <source 
+                srcset="images/contact/bird.png"
+                media="(min-width: 1280px)"
+              >
+              <source 
+                srcset="images/contact/bird-tablet.png"
+                media="(min-width: 768px)"
+              >
+              <img 
+                src="images/contact/bird-tablet.png" 
+                alt="bird"
+                class="about-section__image"
+              >
+            </picture>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <div class="footer__container">
+      <footer class="footer container">
+        <div class="footer__links-box">
+          <a href="#shop" class="footer__link">Shop</a>
+          <a href="#contactUs" class="footer__link">Contact</a>
+          <a href="#aboutUs" class="footer__link">About</a>
+        </div>
+        <div class="footer__copyright">Copyright© 2022 Witch Of Mountain Winds</div>
+        <div class="footer__contacts-box">
+          <a
+            href="https://goo.gl/maps/kepKPHgnJD1DeKip7"
+            class="footer__contact"
+            target="_blank"
+          >
+            Ukraine
+          </a>
+          <a
+            href="mailto:support.mountain@gmail.com"
+            class="footer__contact"
+            target="_blank"
+          >
+          support.mountain@gmail.com
+          </a>
+          <a
+            href="tel:+380934476839"
+            class="footer__contact"
+            target="_blank"
+          >
+          +380934476839
+          </a>
+          <p class="footer__contact">Support is available Monday - Friday 9am-6pm</p>
+        </div>
+        <div class="footer__social-media-box">
+          <a
+            href="https://www.facebook.com/witch.of.mountain.winds"
+            target="_blank"
+            class="social-media__link"
+          >
+            <img
+              src="images/footer/facebook.svg"
+              alt="facebook"
+            >
+          </a>
+          <a
+            href="https://www.instagram.com/witch_of_mountain_winds/"
+            target="_blank"
+            class="social-media__link"
+          >
+            <img
+              src="images/footer/instagram.svg"
+              alt="instagram"
+            >
+          </a>
+        </div>
+      </footer>
+    </div>
     <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="scripts/slider.js"></script>
   </body>
 </html>
