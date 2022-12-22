@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 @import "utils";
 @import "fonts";
 @import "typography";
@@ -22,6 +18,10 @@
 @import "footer";
 @import "label";
 @import "container";
+
+* {
+  box-sizing: border-box;
+}
 
 .page {
   scroll-behavior: smooth;
